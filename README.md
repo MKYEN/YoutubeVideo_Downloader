@@ -1,4 +1,4 @@
-# yt-dlp + FFmpeg (Windows)
+# yt-dlp + FFmpeg
 
 ## Python version
 
@@ -33,7 +33,12 @@ ffmpeg -version
 
 ## Windows certificate handling
 
-Due to a **Windows-specific certificate validation problem**, SSL certificate checking is disabled in the code.
+Due to a **Windows-specific certificate validation problem**, SSL certificate checking is disabled in the  code with  "nocheckcertificate": True 
+
+## macOS note
+
+On macOS, the application works without disabling SSL certificate verification and does not require any certificate-related workaround.
+
 
 ## Python script
 
@@ -53,3 +58,4 @@ with yt_dlp.YoutubeDL(ydl_opts) as ydl:
     ydl.download([url])
 
 print("Download completed.")
+
